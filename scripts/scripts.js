@@ -1,4 +1,5 @@
-//object declaration for restaurants
+//object declaration for restaurant=-6 0=-0987lkjnbvc l;
+
 
 
 //Start Page
@@ -8,8 +9,6 @@
 
 // Option tabs
     // function that allows user selections to be inputed as values, that will be used to narrow down options for ramen selections
-
-    //function that animates images as you hover
 
     //function that opens each tab to full view of selected step
 
