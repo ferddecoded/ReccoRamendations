@@ -204,7 +204,8 @@ a {
   .proteinForm input,
   .toppingsForm input {
     opacity: 0;
-    position: absolute; }
+    position: absolute;
+    top: -50000px; }
   .dietaryForm label,
   .flavorForm label,
   .proteinForm label,

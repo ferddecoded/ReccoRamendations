@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/animate1.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Paytone+One" rel="stylesheet"> 
         <title>Ramen-ator</title>
     </head>
@@ -15,9 +16,9 @@
                 <div class="landingPageImage">
                     <img src="images/ramenBowl.png" alt="Picture of a bowl of ramen">
                     
-                    <blockquote>Go through the questionnaire down below to see what kind of ramen is best suited for you. We'll let you know of a location that you can also check out with just the right ramen for you.</blockquote>
-                    <button class="next">Let's Start</button>
                 </div>
+                <blockquote>Go through the questionnaire down below to see what kind of ramen is best suited for you. We'll let you know of a location that you can also check out with just the right ramen for you.</blockquote>
+                <button class="next">Let's Start</button>
 
             </div>
         </main>
@@ -26,44 +27,39 @@
             <div class="wrapper">
                 <div class="dietaryHeader header">
                     <h2>Flavor Profile</h2>
-                    <blockquote>Think of what would give you the greatest sense of umami.</blockquote>
+                    <blockquote>You want that Umami feeling of taste.</blockquote>
                 </div>
                 <form action="" class="form dietaryForm">
-                    <!-- <div class="selection dietarySelection">  -->
                         <label for="pork" class="dietaryType pork">
                             <img src="images/pig.png" alt="picture of a big">
                             <blockquote>Pork</blockquote>
                         </label> 
-                        <input type="radio" id="pork" name="dietary" value="pork">
-                    <!-- </div> -->
+                        <input class="dietaryTypeRadio" type="radio" id="pork" name="dietary" value="pork">
 
-                    <!-- <div class="selection dietarySelection"> -->
+                    
                         <label for="chicken" class="dietaryType chicken">
                             <img src="images/chicken.png" alt="picture of a chicken">
                             <blockquote>Chicken</blockquote>
                         </label>
-                        <input type="radio" id="chicken" name="dietary" value="chicken">
-                    <!-- </div> -->
+                        <input class="dietaryTypeRadio" type="radio" id="chicken" name="dietary" value="chicken">
 
-                    <!-- <div class="selection dietarySelection"> -->
+                   
                         <label for="seafood" class="dietaryType seafood">
                             <img src="images/seafood.png" alt="picture of seafood">
                             <blockquote>seafood</blockquote>
                         </label>
-                        <input type="radio" id="seafood" name="dietary" value="seafood">
-                    <!-- </div> -->
-                    <!-- <div class="selection dietarySelection"> -->
+                        <input class="dietaryTypeRadio" type="radio" id="seafood" name="dietary" value="seafood">
+                   
                         
                         <label for="vegetarian" class="dietaryType vegetarian">
                             <img src="images/vegetable.png" alt="picture of a carrot">
                             <blockquote>vegetable</blockquote>
                         </label>
-                        <input type="radio" id="vegetarian" name="dietary" value="vegetarian">
-                    <!-- </div> -->
+                        <input class="dietaryTypeRadio" type="radio" id="vegetarian" name="dietary" value="vegetarian">
 
                 </form>
                 <blockquote>Awesome, so we've figured out what you cannot eat, let's look into a style ramen ...</blockquote>
-                <button class="next">Lets go</button>
+                <button class="next" id="dietaryButton">Lets go</button>
 
             </div>
         </section>
@@ -72,31 +68,30 @@
             <div class="wrapper">
                     <div class="flavorHeader header">
                         <h2>Ramen Style</h2>
-                        <blockquote>Style your Ramen Just the Way you Like It</blockquote>
+                        <blockquote>Style your Ramen Your Way</blockquote>
                     </div>
 
                     <div class="flexcontainer">
-                        <img src="" alt="">
 
                         <form action="" class="form flavorForm">
                             
                             <label for="shoyu" class="flavorType shoyu">Some Soy Sauce</label> 
-                            <input type="radio" id="shoyu" name="flavor" value="shoyu">
+                            <input class="flavorTypeRadio" type="radio" id="shoyu" name="flavor" value="shoyu">
                                 
             
                                 
                             <label for="shio" class="flavorType chicken">Let's Make It Salty</label>
-                            <input type="radio" id="shio" name="flavor" value="shio">
+                            <input class="flavorTypeRadio" type="radio" id="shio" name="flavor" value="shio">
                                 
             
                                 
                             <label for="miso" class="flavorType spicy">SoyBeans, I Guess</label>
-                            <input type="radio" id="miso" name="flavor" value="miso">
+                            <input class="flavorTypeRadio" type="radio" id="miso" name="flavor" value="miso">
                                 
             
                                 
                             <label for="spicy" class="flavorType spicy">That Spicy Kick</label>
-                            <input type="radio" id="spicy" name="flavor" value="spicy">
+                            <input class="flavorTypeRadio" type="radio" id="spicy" name="flavor" value="spicy">
                             
                         </form>
                     </div>
@@ -114,17 +109,17 @@
                 <form action="" class="form proteinForm">
                     
                     <label for="Chicken" class="proteinType chicken"><blockquote>Chicken</blockquote></label> 
-                    <input type="radio" id="Chicken" name="proteinToppings" value="chicken">
+                    <input class="proteinTypeRadio" type="radio" id="Chicken" name="proteinToppings" value="chicken">
                 
                     <label for="Pork" class="proteinType pork"><blockquote>Pork</blockquote></label>
-                    <input type="radio" id="Pork" name="proteinToppings" value="pork">
+                    <input class="proteinTypeRadio" type="radio" id="Pork" name="proteinToppings" value="pork">
                 
                 
                     <label for="tofu" class="proteinType tofu"><blockquote>Tofu</blockquote></label>
-                    <input type="radio" id="tofu" name="proteinToppings" value="tofu">
+                    <input class="proteinTypeRadio" type="radio" id="tofu" name="proteinToppings" value="tofu">
                 
                     <label for="none" class="proteinType none"><blockquote>none</blockquote></label>
-                    <input type="radio" id="none" name="proteinToppings" value="none">
+                    <input class="proteinTypeRadio" type="radio" id="none" name="proteinToppings" value="none">
                     
                 </form>
 
@@ -136,50 +131,46 @@
             <div class="wrapper">
                 <div class="toppingsHeader header">
                     <h2>Top It Off</h2>
-                    <blockquote>There's Always Room For More!</blockquote>
+                    <blockquote>Add Some More</blockquote>
                 </div>
     
                 <form action="" class="form toppingsForm">
                     
                     <label for="Egg" class="toppingsType egg">
-                        <!-- <img src="images/egg.png" alt="picture of an egg"> -->
                         <blockquote>Egg</blockquote>
                     </label> 
-                    <input type="radio" id="Egg" name="toppings" value="Egg">
+                    <input class="toppingsTypeRadio" type="radio" id="Egg" name="toppings" value="Egg">
                     
     
                     
                     <label for="Corn" class="toppingsType corn">
-                        <!-- <img src="images/corn.png" alt="picture of a corn kernel"> -->
                         <blockquote>Corn</blockquote>
                     </label>
-                    <input type="radio" id="Corn" name="toppings" value="Corn">
+                    <input class="toppingsTypeRadio" type="radio" id="Corn" name="toppings" value="Corn">
                     
     
                     
                     <label for="Seaweed" class="toppingsType seaweed">
-                        <!-- <img src="images/nori.png" alt="picture of seaweed"> -->
                         <blockquote>Seaweed</blockquote>
                     </label>
-                    <input type="radio" id="Seaweed" name="toppings" value="Seaweed">
+                    <input class="toppingsTypeRadio" type="radio" id="Seaweed" name="toppings" value="Seaweed">
                     
     
                     
                     <label for="Bamboo" class="toppingsType Bamboo">
-                        <!-- <img src="images/bamboo.png" alt="picture of bamboo shoot"> -->
                         <blockquote>Bamboo</blockquote>
                     </label>
-                    <input type="radio" id="Bamboo" name="toppings" value="Bamboo">
+                    <input class="toppingsTypeRadio" type="radio" id="Bamboo" name="toppings" value="Bamboo">
                     
     
                     
                     <label for="Sprouts" class="toppingsType Sprouts"><blockquote>Bean Sprouts</blockquote></label>
-                    <input type="radio" id="Sprouts" name="toppings" value="Sprouts">
+                    <input class="toppingsTypeRadio" type="radio" id="Sprouts" name="toppings" value="Sprouts">
                     
     
                     
                     <label for="Garlic" class="toppingsType Garlic Oil"><blockquote>Garlic Oil</blockquote></label>
-                    <input type="radio" id="Garlic" name="toppings" value="Garlic">
+                    <input class="toppingsTypeRadio" type="radio" id="Garlic" name="toppings" value="Garlic">
                     
                     <blockquote>Now let's find the best ramen for you and a place for you to check out!</blockquote>
                 </form>
@@ -190,6 +181,8 @@
         
         <div class="results" id="resultsSection">
             <div class="wrapper">
+                <a href="" class="resto">Restaurant</a>
+                <a href="" class="tweet">tweet <i class="fa fa-twitter" aria-hidden="true"></i></a>
                 <div class="header">
                     <h2></h2>
                     <blockquote class="style"></blockquote>
@@ -208,8 +201,9 @@
         <div class="fixed">
             <button class="reset">Reset</button>
         </div>
+        <script src="https://use.fontawesome.com/e062d4be06.js"></script>
         <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
-        <script src="scripts/scripts2.js"></script>
+        <script src="scripts/scripts.js"></script>
     </body>
 </html>

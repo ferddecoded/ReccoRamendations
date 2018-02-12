@@ -5,77 +5,93 @@
         restaurants.chicken = [
             {
                 name: "Kinton Ramen",
-                flavor: "shio"
+                flavor: "shio",
+                url: `http://www.kintonramen.com/canada/`
             },
             {
                 name: "Raijin Ramen",
-                flavor:"miso"
+                flavor:"miso",
+                url: `http://www.zakkushi.com/raijin/`
             },
             {
                 name: "Ryus Noodle bar",
-                flavor: "spicy"
+                flavor: "spicy",
+                url: `http://www.ryusnoodlebar.com/`
             },
             {
                 name: "Kyouka Ramen",
-                flavor: "shoyu"
+                flavor: "shoyu",
+                url: `http://kyouka.ca/`
             }
         ]
 
         restaurants.pork = [
             {
                 name: "Santouka Ramen",
-                flavor: "miso"
+                flavor: "miso",
+                url: `http://www.santouka.co.jp/en`
             },
             {
                 name: "Sansotei Ramen",
-                flavor: "spicy"
+                flavor: "spicy",
+                url: `http://www.sansotei.com/`
             },
             {
                 name: "Konjiki Ramen",
-                flavor: "shoyu"
+                flavor: "shoyu",
+                url: `http://konjikiramen.com/`
                         
             },
             {
                 name: "Kinton Ramen",
-                flavor: "shio"
+                flavor: "shio",
+                url: `http://www.kintonramen.com/canada/`
             }
         ]
 
         restaurants.seafood = [
             {
                 name: "Konjiki Ramen",
-                flavor: "shoyu"
+                flavor: "shoyu",
+                url: `http://konjikiramen.com/`
             },
             {
                 name: "Raijin Ramen",
-                flavor: "shio"
+                flavor: "shio",
+                url: `http://www.zakkushi.com/raijin/`
             },
             {
                 name: "Ramen Isshin",
-                flavor: "miso"
+                flavor: "miso",
+                url: `https://www.ramenisshin.com/`
             },
             {
                 name: "Sansotei Ramen",
-                flavor: "spicy"
+                flavor: "spicy",
+                url: `http://www.sansotei.com/`
             }
         ]
 
         restaurants.vegetarian = [
             {
                 name: "Konjiki Ramen",
-                flavor: "shio"
+                flavor: "shio",
+                url: `http://konjikiramen.com/`
             },
             {
                 name: "Kinton Ramen",
-                flavor: "miso"
+                flavor: "miso",
+                url: `http://www.kintonramen.com/canada/`
             },
             {
                 name: "Ryus Noodle bar",
-                flavor: "shoyu"
+                flavor: "shoyu",
+                url: `http://www.ryusnoodlebar.com/`
             },
             {
                 name: "Ramen Isshin",
-                flavor: "spicy"
+                flavor: "spicy",
+                url: `https://www.ramenisshin.com/`
             }
         ]
         
@@ -105,7 +121,7 @@
         restaurants.protein = [
             {
                 name: "pork",
-                description: `Japanese chashu served with bowls of ramen are actually braised in soy sauce, sake and sugar at low temperature. Chashu is sometimes called “nibuta” (煮豚) in Japanese, literally meaning “simmered/braised pork”.` 
+                description: `Japanese pork chashu served with bowls of ramen are actually braised in soy sauce, sake and sugar at low temperature. Chashu is sometimes called “nibuta” (煮豚) in Japanese, literally meaning “simmered/braised pork”.` 
             },
             {
                 name: "chicken",
@@ -181,53 +197,56 @@
             }, 500);
         });
 
+        //
+        $('.next').mouseenter(function() {
+            $('.landingPageImage img').addClass('pulse');
+        }).mouseleave(function() {
+            $('.landingPageImage img').removeClass('pulse');
+        });
+
         let userBase;
         let userFlavor;
         let proteinChoice;
         let toppingsChoice;
-        
-        //assigns user input for base selection
-        $(".dietaryType").on("click", function() {
+
+        $(".dietaryTypeRadio").on("change", function() {
             //assigns a variable the value of the selected option
             userBase = $("input[name=dietary]:checked").val();
             //removes any prexisting border on previous chosen options
             $(".dietaryType").removeClass("picked");
             //adds a border around current selection
-            $(this).addClass("picked");
-            console.log(userBase);
-        });
-        
-        //assigns user input for flavor selection when clicked
-        $(".flavorType").on("click", function() {
-            //removes any prexisting border on previous chosen options
-            $(".flavorType").removeClass("chosen");
-            //adds a border around current selection
-            $(this).addClass("chosen");
-            //assign variable for when label is clicked
-            userFlavor = $("input[name=flavor]:checked").val();
-            console.log(userFlavor);
-        });
-        
-        //assigns user input for protein selection
-        
-        $(".proteinType").on("click", function(){
-            //assigns a variable the value of the selected option
-            proteinChoice = $("input[name=proteinToppings]:checked").val();
-            //takesaway any borders from any prexisitng choices
-            $(".proteinType").removeClass("chosen");
-            //places a border around the selected choice
-            $(this).addClass("chosen");
-            console.log(proteinChoice);
+            $(this).prev('label').addClass("picked");
+            console.log(userBase, this);
         });
 
-        $(".toppingsType").on("click", function (){
-            //takesaway any borders from any prexisitng choices
-            $(".toppingsType").removeClass("chosen");
-            //places a border around the selected choice
-            $(this).addClass("chosen");
+        $(".flavorTypeRadio").on("change", function() {
+            //assigns a variable the value of the selected option
+            userFlavor = $("input[name=flavor]:checked").val();
+            //removes any prexisting border on previous chosen options
+            $(".flavorType").removeClass("picked");
+            //adds a border around current selection
+            $(this).prev('label').addClass("picked");
+            console.log(userFlavor, this);
+        });
+
+        $(".proteinTypeRadio").on("change", function() {
+            //assigns a variable the value of the selected option
+            proteinChoice = $("input[name=proteinToppings]:checked").val();
+            //removes any prexisting border on previous chosen options
+            $(".proteinType").removeClass("picked");
+            //adds a border around current selection
+            $(this).prev('label').addClass("picked");
+            console.log(proteinChoice, this);
+        });
+
+        $(".toppingsTypeRadio").on("change", function() {
             //assigns a variable the value of the selected option
             toppingsChoice = $("input[name=toppings]:checked").val();
-            console.log(toppingsChoice);
+            //removes any prexisting border on previous chosen options
+            $(".toppingsType").removeClass("picked");
+            //adds a border around current selection
+            $(this).prev('label').addClass("picked");
+            console.log(toppingsChoice, this);
         });
 
         //resets page
@@ -237,6 +256,7 @@
 
         //on final submit, let's gather all our information
         $(".finalSubmit").on("click", function(e) {
+            e.preventDefault();
             $('html, body').animate({
                 scrollTop: $('#resultsSection').offset().top
             }, 500);
@@ -279,15 +299,17 @@
             let flavorPhoto = restoFlavor[0].img;
             console.log(flavorPhoto);
 
+            let restoUrl = suggestResto[0].url;
+            console.log(restoUrl);
+
             //to display results in results section
             $('.results h2').html(restoName);
             $('.results .style').html(userFlavor);
             $("#brothImage").attr("src", flavorPhoto);
+            $("a.resto").attr("href", restoUrl);
+            $('a.tweet').attr(`href`,`https://twitter.com/intent/tweet?text=So excited to try a ${userFlavor} ramen at ${restoName}. Im definitely going to add extra ${toppingsChoice}&hashtags=RamenAtor`);
             $('.results .first').html(flavorDescription);
             $('.results .second').html(proteinDescription);
         });
 
     });
-
-
-   
