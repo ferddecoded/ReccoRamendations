@@ -1,0 +1,22 @@
+//LANDING PAGE
+.landingPage {
+    background: rgb(229, 75, 75);
+    box-shadow: 3px 7px 14px lightgrey;
+    margin-bottom: 100px;
+
+    h1{
+        color: white;
+    }
+
+    .landingPageImage {
+        background: #e54b4b;
+
+        img {
+            width: 300px;
+        }
+    }
+
+    blockquote {
+        color: white;
+    }
+}

@@ -1,0 +1,39 @@
+section {
+    margin-bottom: 100px;
+}
+
+.header {
+    position: relative;
+    margin-bottom: 100px;
+
+    h2 {
+        font-size: 12rem;
+        color: #e54b4b;
+        line-height: 1;
+        opacity: .5;
+    }
+
+    blockquote {
+        position: absolute;
+        top: 10%;
+        font-weight: 700;
+        line-height: 6;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+.results {
+    padding: 0;
+
+    blockquote.style {
+        font-size: 7rem;
+        top: 0;
+        text-transform: uppercase;
+    }
+
+    .resultsImage {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
