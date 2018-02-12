@@ -1,0 +1,65 @@
+@import "components/normalize";
+@import "components/typography";
+@import "components/landingPage";
+@import "components/buttons";
+@import "components/forms";
+@import "components/sections";
+
+
+.displayNone {
+    display: none;
+}
+
+.displayOn {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+body {
+    background: white;
+    font-family: 'Montserrat';
+    margin: 0;
+    position: relative;
+
+}
+
+html {
+    font-size: 62.5%; /* makes font 10px */
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+div.wrapper {
+    max-width: 900px;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+section .wrapper,
+.results .wrapper {
+    box-shadow: 3px 7px 14px lightgrey;
+}
+
+
+.fixed {
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    border-top: 1px solid rgb(229, 75, 75);
+    padding:10px 0;
+    margin: 0;
+
+    button {
+        margin-bottom: 0;
+    }
+}
