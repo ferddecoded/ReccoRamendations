@@ -87,3 +87,17 @@ section {
         }
     }
 }
+
+@media (max-width: 350px) {
+   .header {
+      blockquote {
+         top: -40%;
+      }
+   }
+
+   .resto,
+   .tweet {
+      display: block;
+      margin-bottom: 20px;
+   }
+}

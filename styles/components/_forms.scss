@@ -106,3 +106,9 @@ label.toppingsType {
     }
 }
 
+@media (max-width: 350px) {
+   label.dietaryType, label.proteinType {
+      width: 45%;
+   }
+}
+

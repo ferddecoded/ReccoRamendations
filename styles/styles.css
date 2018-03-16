@@ -293,6 +293,10 @@ label.toppingsType {
   label.proteinType {
     padding: 10px; } }
 
+@media (max-width: 350px) {
+  label.dietaryType, label.proteinType {
+    width: 45%; } }
+
 section {
   margin-bottom: 50px; }
 
@@ -349,6 +353,14 @@ section {
 @media (max-width: 420px) {
   .header h2 {
     font-size: 4rem; } }
+
+@media (max-width: 350px) {
+  .header blockquote {
+    top: -40%; }
+  .resto,
+  .tweet {
+    display: block;
+    margin-bottom: 20px; } }
 
 .displayNone {
   display: none; }
